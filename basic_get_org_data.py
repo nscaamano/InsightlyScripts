@@ -26,16 +26,12 @@ def get_object_data(obj):
 def main(): 
     json_data = get_json_data(0)
     offset = 500
-    insightly_count = len(json_data)
     while json_data != []:
         for obj in json_data:
             data = get_object_data(obj)
             #do stuff with data here
         json_data = get_json_data(offset)
         offset += 500
-        insightly_count += len(json_data)
-    
-            
-   
+        
 if __name__ == "__main__":
     main()
